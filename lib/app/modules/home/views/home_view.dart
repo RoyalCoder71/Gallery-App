@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../custom_search_delegate_class/search_class.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -7,6 +8,29 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff4361ee),
+      appBar: AppBar(
+        backgroundColor: Color(0xff4361ee),
+        title: Text(
+          "The best app to find your favourite picture",
+          style: TextStyle(
+            fontSize: 25,
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
+        elevation: 0,
+        actions: [
+          IconButton(
+            onPressed: () {
+              showSearch(
+                context: context,
+                delegate: CustomSearchDelegate(),
+              );
+            },
+            icon: Icon(Icons.search),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -14,17 +38,17 @@ class HomeView extends GetView<HomeController> {
             SizedBox(
               height: 20,
             ),
-            Text(
-              "Gallery Page",
-              style: TextStyle(
-                fontSize: 25,
-                color: Colors.white,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 30,
-            ),
+            // Text(
+            //   "The best app to find your favourite picture",
+            //   style: TextStyle(
+            //     fontSize: 25,
+            //     color: Colors.white,
+            //   ),
+            //   textAlign: TextAlign.center,
+            // ),
+            // SizedBox(
+            //   height: 30,
+            // ),
             Expanded(
               child: Container(
                 padding: EdgeInsets.symmetric(
@@ -40,7 +64,7 @@ class HomeView extends GetView<HomeController> {
                 ),
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                    crossAxisCount: 5,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                   ),
