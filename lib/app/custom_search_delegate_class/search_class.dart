@@ -23,6 +23,7 @@ class CustomSearchDelegate extends SearchDelegate {
     "Philippines",
     "Australia",
     "New Zealand",
+    "Africa",
   ];
   @override
   List<Widget> buildActions(BuildContext context) {
