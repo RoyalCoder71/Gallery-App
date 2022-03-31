@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gallery/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 class IntroView extends GetView {
@@ -11,7 +12,9 @@ class IntroView extends GetView {
       ),
       body: Center(
         child: TextButton.icon(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed(Routes.HOME);
+          },
           icon: Icon(
             Icons.browse_gallery,
           ),
