@@ -11,6 +11,9 @@ dependencies:
   get: 4.6.1
   flutter: 
     sdk: flutter
+  url_launcher: ^6.0.20
+  font_awesome_flutter: ^10.1.0
+  user_profile_avatar: ^0.1.0
 
 
 dev_dependencies: 

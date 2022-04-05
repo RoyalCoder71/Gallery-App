@@ -11,7 +11,7 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         backgroundColor: Color(0xff4361ee),
         title: Text(
-          "The best app to find your favourite picture",
+          "The best app to find picture",
           style: TextStyle(
             fontSize: 25,
             color: Colors.white,
