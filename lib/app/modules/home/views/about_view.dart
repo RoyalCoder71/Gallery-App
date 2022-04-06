@@ -8,7 +8,7 @@ class AboutView extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff390099),
+      backgroundColor: Color(0xff08093b),
       appBar: AppBar(
         title: Text(
           "Yeaseen Ahmed's Information",
@@ -65,7 +65,7 @@ class AboutView extends GetView {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Color(0xffffea00),
+                    color: Color(0xffffffff),
                   ),
                 ),
                 SizedBox(
@@ -87,6 +87,7 @@ class AboutView extends GetView {
                               " shekhyeaseen@gmail.com",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
+                                color: Color(0xffffea00),
                               ),
                             ),
                           ],
@@ -124,6 +125,7 @@ class AboutView extends GetView {
                               "Hakkani,Gazipur,Bangladesh",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
+                                color: Color(0xffffea00),
                               ),
                             ),
                           ],
@@ -146,6 +148,7 @@ class AboutView extends GetView {
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Roboto',
                     letterSpacing: 1.5,
+                    color: Color(0xffffffff),
                   ),
                 ),
                 IconButton(

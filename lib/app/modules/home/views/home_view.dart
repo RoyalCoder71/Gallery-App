@@ -7,9 +7,9 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff4361ee),
+      backgroundColor: Color(0xff08093b),
       appBar: AppBar(
-        backgroundColor: Color(0xff4361ee),
+        backgroundColor: Color(0xff08093b),
         title: Text(
           "The best app to find picture",
           style: TextStyle(
