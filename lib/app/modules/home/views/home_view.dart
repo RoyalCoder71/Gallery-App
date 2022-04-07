@@ -61,6 +61,12 @@ class HomeView extends GetView<HomeController> {
                     topLeft: Radius.circular(50),
                     topRight: Radius.circular(50),
                   ),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://mir-s3-cdn-cf.behance.net/projects/404/5cfaab130472435.618482371debc.jpg",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
