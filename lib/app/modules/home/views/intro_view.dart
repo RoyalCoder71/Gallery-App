@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:gallery/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
@@ -39,6 +38,10 @@ class IntroView extends GetView {
                       visualDensity: VisualDensity.comfortable,
                       elevation: 10,
                       primary: Color(0xff08093b),
+                      side: BorderSide(
+                        style: BorderStyle.solid,
+                        color: Color(0xffffffff),
+                      ),
                     ),
                   ),
                   ElevatedButton(
@@ -54,6 +57,10 @@ class IntroView extends GetView {
                       shadowColor: Colors.black,
                       visualDensity: VisualDensity.comfortable,
                       primary: Color(0xff08093b),
+                      side: BorderSide(
+                        style: BorderStyle.solid,
+                        color: Color(0xffffffff),
+                      ),
                       elevation: 10,
                     ),
                   ),
