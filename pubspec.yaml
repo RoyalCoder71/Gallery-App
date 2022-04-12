@@ -14,6 +14,11 @@ dependencies:
   url_launcher: ^6.0.20
   font_awesome_flutter: ^10.1.0
   user_profile_avatar: ^0.1.0
+  simple_star_rating: ^0.0.3
+  push_notification: ^1.1.1
+
+
+
 
 
 dev_dependencies: 

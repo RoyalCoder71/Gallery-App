@@ -46,7 +46,7 @@ class IntroView extends GetView {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Get.toNamed(Routes.ABOUT);
+                      Get.toNamed(Routes.RATING);
                     },
                     child: Text('About'),
                     // autofocus: true,

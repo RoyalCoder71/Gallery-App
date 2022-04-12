@@ -3,6 +3,7 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/about_view.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/intro_view.dart';
+import '../modules/home/views/rating_view.dart';
 part 'app_routes.dart';
 
 class AppPages {
@@ -24,6 +25,11 @@ class AppPages {
     GetPage(
       name: _Paths.INTRO,
       page: () => IntroView(),
+      // binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.RATING,
+      page: () => RatingView(),
       // binding: HomeBinding(),
     ),
   ];
