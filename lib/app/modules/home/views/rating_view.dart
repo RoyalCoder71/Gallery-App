@@ -28,18 +28,7 @@ class RatingView extends GetView {
               ),
             ),
           ),
-          // FloatingActionButton(
-          //   onPressed: () {
-          //     SnackBar(
-          //       content: Text('Rating is '),
-          //       action: SnackBarAction(
-          //         label: 'OK',
-          //         onPressed: () {},
-          //       ),
-          //     );
-
-          //   },
-          // ),
+          TextButton(onPressed: () {}, child: Text("Submit"))
         ],
       ),
     );
