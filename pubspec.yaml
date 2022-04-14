@@ -16,6 +16,7 @@ dependencies:
   user_profile_avatar: ^0.1.0
   simple_star_rating: ^0.0.3
   native_notify: ^0.0.12
+  http: ^0.13.4
 
 
 

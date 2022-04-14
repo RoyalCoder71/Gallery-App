@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'package:simple_star_rating/simple_star_rating.dart';
 
 class RatingView extends GetView {
+  get child => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +31,7 @@ class RatingView extends GetView {
               ),
             ),
           ),
-          TextButton(onPressed: () {}, child: Text("Submit"))
+          ElevatedButton(onPressed: () {}, child: Text("Tap me")),
         ],
       ),
     );
