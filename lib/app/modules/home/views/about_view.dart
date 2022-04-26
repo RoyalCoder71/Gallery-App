@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:url_launcher/url_launcher.dart';
+
+import 'package:url_launcher/url_launcher_string.dart';
 import 'package:user_profile_avatar/user_profile_avatar.dart';
 
 class AboutView extends GetView {
@@ -158,7 +159,7 @@ class AboutView extends GetView {
                     size: 30,
                   ),
                   onPressed: () {
-                    launch("https://github.com/yeaseen-564");
+                    launchUrlString("https://github.com/yeaseen-564");
                   },
                 ),
                 IconButton(
@@ -168,7 +169,8 @@ class AboutView extends GetView {
                     size: 30,
                   ),
                   onPressed: () {
-                    launch("https://www.facebook.com/yeaseen.ahmed.75");
+                    launchUrlString(
+                        "https://www.facebook.com/yeaseen.ahmed.75");
                   },
                 ),
                 IconButton(
@@ -178,7 +180,7 @@ class AboutView extends GetView {
                     size: 30,
                   ),
                   onPressed: () {
-                    launch(
+                    launchUrlString(
                         "https://www.linkedin.com/in/yeaseen-ahmed-77bb98231/");
                   },
                 ),
@@ -189,7 +191,8 @@ class AboutView extends GetView {
                     size: 30,
                   ),
                   onPressed: () {
-                    launch("https://www.instagram.com/yeaseenahmed37/");
+                    launchUrlString(
+                        "https://www.instagram.com/yeaseenahmed37/");
                   },
                 ),
               ],

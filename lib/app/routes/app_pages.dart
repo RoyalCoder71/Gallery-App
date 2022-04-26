@@ -5,6 +5,7 @@ import '../modules/home/views/about_view.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/intro_view.dart';
 import '../modules/home/views/rating_view.dart';
+import '../modules/home/views/register_view.dart';
 part 'app_routes.dart';
 
 class AppPages {
@@ -36,6 +37,11 @@ class AppPages {
     GetPage(
       name: _Paths.LOGIN,
       page: () => LoginView(),
+      // binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTER,
+      page: () => RegisterView(),
       // binding: HomeBinding(),
     ),
   ];

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
+import '../../../routes/app_pages.dart';
 
 class LoginView extends GetView {
   @override
@@ -23,7 +23,7 @@ class LoginView extends GetView {
                 top: 130,
               ),
               child: Text(
-                "Welcome\nBack",
+                "Welcome,\nHere you can login",
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,
@@ -35,7 +35,8 @@ class LoginView extends GetView {
               padding: const EdgeInsets.all(15.0),
               child: Container(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.5),
+                  top: MediaQuery.of(context).size.height * 0.5,
+                ),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
@@ -45,9 +46,7 @@ class LoginView extends GetView {
                           fillColor: Colors.grey[200],
                           hintText: "Email",
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(
-                              10,
-                            ),
+                            borderRadius: BorderRadius.circular(10),
                           ),
                         ),
                       ),
@@ -61,11 +60,65 @@ class LoginView extends GetView {
                           fillColor: Colors.grey[200],
                           hintText: "Password",
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(
-                              10,
-                            ),
+                            borderRadius: BorderRadius.circular(10),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Sign In",
+                            style: TextStyle(
+                              fontSize: 47,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          CircleAvatar(
+                            backgroundColor: Colors.grey[800],
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.arrow_forward_ios,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, Routes.REGISTER);
+                            },
+                            child: Text(
+                              "Sign Up",
+                              style: TextStyle(
+                                fontSize: 15,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Forgot Password?",
+                              style: TextStyle(
+                                fontSize: 15,
+                                decoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

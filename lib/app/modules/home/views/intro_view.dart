@@ -19,7 +19,8 @@ class IntroView extends GetView {
         child: Column(
           children: [
             Image.network(
-                "https://cdn.dribbble.com/users/1937255/screenshots/15040485/media/a40ebb552abe943e6b1cc4698665141c.png?compress=1&resize=320x240&vertical=top"),
+              "https://cdn.dribbble.com/users/1937255/screenshots/15040485/media/a40ebb552abe943e6b1cc4698665141c.png?compress=1&resize=320x240&vertical=top",
+            ),
             Center(
               child: ButtonBar(
                 alignment: MainAxisAlignment.center,
@@ -46,7 +47,7 @@ class IntroView extends GetView {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Get.toNamed(Routes.RATING);
+                      Get.toNamed(Routes.ABOUT);
                     },
                     child: Text('About'),
                     // autofocus: true,
