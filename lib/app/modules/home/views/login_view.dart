@@ -9,7 +9,7 @@ class LoginView extends GetView {
       decoration: BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-              "https://scontent.fdac2-1.fna.fbcdn.net/v/t39.30808-6/278977901_510020587422056_4442352905680324691_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGSw53i-zD4EbbOOa9ecUSNLPH-AwOl7dos8f4DA6Xt2rlRU_JYxfPjtujQtPheWlUB2-m8un8zDnbNsyKv-Ji9&_nc_ohc=zF14GjEYcNkAX-a0QGc&tn=li1HxcjmK3XMgzwz&_nc_zt=23&_nc_ht=scontent.fdac2-1.fna&oh=00_AT_4sLxt77thjWXUdx640pPRD806y46QowirfR9tCWEvNw&oe=6268863C"),
+              "https://scontent.fdac3-1.fna.fbcdn.net/v/t39.30808-6/278977901_510020587422056_4442352905680324691_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGSw53i-zD4EbbOOa9ecUSNLPH-AwOl7dos8f4DA6Xt2rlRU_JYxfPjtujQtPheWlUB2-m8un8zDnbNsyKv-Ji9&_nc_ohc=5aPjtcMd99MAX_vQ486&tn=li1HxcjmK3XMgzwz&_nc_zt=23&_nc_ht=scontent.fdac3-1.fna&oh=00_AT9n2ChGqTt387dibl-iHJfekASjuSNrNH4wM81du7xPJw&oe=626E74FC"),
           fit: BoxFit.cover,
         ),
       ),
