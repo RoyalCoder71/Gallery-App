@@ -23,7 +23,7 @@ class LoginView extends GetView {
                 top: 130,
               ),
               child: Text(
-                "Welcome,\nHere you can login",
+                "Welcome,\nlogin here",
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.bold,

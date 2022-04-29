@@ -17,6 +17,7 @@ dependencies:
   simple_star_rating: ^0.0.3
   firebase_auth: ^3.3.15
   firebase_core: ^1.15.0
+  firebase: ^9.0.2
 
 
 dev_dependencies: 
