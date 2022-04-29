@@ -4,6 +4,8 @@ import 'package:gallery/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 class RegisterView extends GetView {
+  String email = "";
+  String pass = "";
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -55,6 +57,9 @@ class RegisterView extends GetView {
                         height: 20,
                       ),
                       TextField(
+                        onChanged: (value) {
+                          email = value;
+                        },
                         decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.grey[200],
@@ -81,6 +86,9 @@ class RegisterView extends GetView {
                         height: 20,
                       ),
                       TextField(
+                        onChanged: (value) {
+                          pass = value;
+                        },
                         obscureText: true,
                         decoration: InputDecoration(
                           filled: true,
@@ -95,6 +103,9 @@ class RegisterView extends GetView {
                         height: 20,
                       ),
                       TextField(
+                        onChanged: (value) {
+                          pass = value;
+                        },
                         obscureText: true,
                         decoration: InputDecoration(
                           filled: true,
@@ -126,18 +137,51 @@ class RegisterView extends GetView {
                               onPressed: () async {
                                 try {
                                   UserCredential userCredential =
-                                      await FirebaseAuth
-                                          .instance
+                                      await FirebaseAuth.instance
                                           .createUserWithEmailAndPassword(
-                                              email: "shekhyeaseen@gmail.com",
-                                              password: "ssssssss");
-                                  Navigator.pushNamed(context, Routes.HOME);
+                                    email: email,
+                                    password: pass,
+                                  );
+                                  Navigator.pushNamed(context, Routes.LOGIN);
                                 } on FirebaseAuthException catch (e) {
                                   if (e.code == 'weak-password') {
-                                    print('The password provided is too weak.');
+                                    return showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          title: Text("Weak-password"),
+                                          content: Text(
+                                              "The password provided is too weak."),
+                                          actions: [
+                                            TextButton(
+                                              child: Text("OK"),
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
                                   } else if (e.code == 'email-already-in-use') {
-                                    print(
-                                        'The account already exists for that email.');
+                                    return showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          title: Text("Used-email"),
+                                          content: Text(
+                                              "The account already exists for that email."),
+                                          actions: [
+                                            TextButton(
+                                              child: Text("OK"),
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
                                   }
                                 } catch (e) {
                                   print(e);

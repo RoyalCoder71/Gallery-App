@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../routes/app_pages.dart';
@@ -5,6 +6,8 @@ import '../../../routes/app_pages.dart';
 class LoginView extends GetView {
   @override
   Widget build(BuildContext context) {
+    String email = "";
+    String pass = "";
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -41,6 +44,9 @@ class LoginView extends GetView {
                   child: Column(
                     children: [
                       TextField(
+                        onChanged: (value) {
+                          email = value;
+                        },
                         decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.grey[200],
@@ -54,6 +60,9 @@ class LoginView extends GetView {
                         height: 30,
                       ),
                       TextField(
+                        onChanged: (value) {
+                          pass = value;
+                        },
                         obscureText: true,
                         decoration: InputDecoration(
                           filled: true,
@@ -82,7 +91,57 @@ class LoginView extends GetView {
                           CircleAvatar(
                             backgroundColor: Colors.grey[800],
                             child: IconButton(
-                              onPressed: () {},
+                              onPressed: () async {
+                                try {
+                                  UserCredential userCredential =
+                                      await FirebaseAuth.instance
+                                          .signInWithEmailAndPassword(
+                                    email: email,
+                                    password: pass,
+                                  );
+                                  Navigator.pushNamed(context, Routes.INTRO);
+                                } on FirebaseAuthException catch (e) {
+                                  if (e.code == 'user-not-found') {
+                                    return showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          title: Text("User not found"),
+                                          content: Text(
+                                              "Try to login with a different email"),
+                                          actions: [
+                                            TextButton(
+                                              child: Text("OK"),
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  } else if (e.code == 'wrong-password') {
+                                    return showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          title: Text("Wrong-password"),
+                                          content: Text(
+                                              "Try to login with correct password."),
+                                          actions: [
+                                            TextButton(
+                                              child: Text("OK"),
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  }
+                                }
+                              },
                               icon: Icon(
                                 Icons.arrow_forward_ios,
                                 color: Colors.white,
